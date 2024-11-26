@@ -12,6 +12,17 @@ O objetivo do projeto é automatizar o processo de validação do formulário de
 ## 🏗️ **Arquitetura**  
 Os testes foram desenvolvidos utilizando **Cypress**, uma das ferramentas mais populares para automação de testes E2E. A estrutura do projeto foi projetada para facilitar a organização e manutenção do código, utilizando boas práticas de automação de testes.  
 
+
+cypress-teste-e2e-antigo  
+├── cypress/  
+│   ├── fixtures/       # Dados estáticos usados nos testes  
+│   ├── integration/    # Especificações dos testes E2E  
+│   ├── plugins/        # Configurações de plugins  
+│   └── support/        # Comandos customizados e configurações globais  
+├── node_modules/       # Dependências instaladas pelo npm  
+├── cypress.config.js   # Configuração principal do Cypress  
+└── package.json        # Gerenciamento de dependências do projeto  
+
 ---
 
 ## 💻 **Tecnologias Utilizadas**  
@@ -65,12 +76,10 @@ Para executar os testes em modo headless (linha de comando):
 bash
 Copiar código
 npx cypress run  
-📂 Organização do Código
-Testes: Os cenários foram escritos utilizando o Cypress e organizados em diretórios conforme sua funcionalidade.
-Fixtures: Dados de entrada para os testes foram armazenados em arquivos .json para facilitar a parametrização.
-Relatórios: Resultados dos testes podem ser gerados com suporte a ferramentas como Mochawesome.
+
+
 🌟 Contribua com o Projeto
 Se você achou este projeto útil, deixe uma ⭐ e sinta-se à vontade para contribuir enviando pull requests.
 
-Desenvolvido por Matheus Silva
-Com aprendizado contínuo em automação de testes.
+Desenvolvido por Matheus Silva  
+Com aprendizado contínuo em automação de testes no curso da Escola TAT (Talking About Testing)
