@@ -1,11 +1,11 @@
-# **Projeto de Automação Cypress CAC-TAT (Talking About Testing)**  
+# Projeto de Automação Cypress CAC-TAT (Talking About Testing)
 
 Este repositório contém a suíte de testes automatizados desenvolvida para validar a aplicação CAC TAT (Central de Atendimento ao Cliente Treinamento), que simula o envio de mensagens a uma central de atendimento.  
 
 ---
 
 ## 🎯 **Objetivo**  
-O objetivo do projeto é automatizar o processo de validação do formulário de atendimento, garantindo que todos os campos e fluxos de interação funcionem conforme o esperado, proporcionando uma experiência de usuário confiável e livre de falhas.  
+O objetivo do projeto é automatizar o processo de validação do formulário de atendimento, garantindo que todos os campos e fluxos de interação funcionem conforme o esperado, proporcionando uma experiência de usuário confiável e sem falhas.  
 
 ---
 
