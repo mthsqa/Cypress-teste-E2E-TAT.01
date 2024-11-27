@@ -1,12 +1,44 @@
 name: End-to-end tests 🧪
-on: [push]
+
+# Aciona o workflow em eventos push ou pull request
+on:
+  push:
+    branches:
+      - main  # Ou qualquer outra branch que você queira monitorar
+  pull_request:
+    branches:
+      - main  # Ou qualquer outra branch que você queira monitorar
+
 jobs:
   cypress-run:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-20.04  # Ambiente de execução (Ubuntu 20.04)
+
     steps:
+      # 1. Checkout do código
       - name: Checkout
-        uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+        uses: actions/checkout@v3
+
+      # 2. Configuração do Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Versão do Node.js a ser usada
+
+      # 3. Instalação das dependências do NPM
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Rodar os testes Cypress
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v3
+        with:
+          start: npm start  # Inicia o servidor, caso seja necessário, ajustando conforme seu projeto
+          
+      # 5. (Opcional) Salvar os relatórios de teste como artefatos
+      - name: Upload Cypress videos and screenshots
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/videos
+            cypress/screenshots
